@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<StackPane prefHeight="600" prefWidth="800.0" style="-fx-background-color: #073D31;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.reservationsController">
+    <children>
+        <ImageView fx:id="headerImage" fitHeight="100.0" fitWidth="700.0" preserveRatio="true" smooth="false">
+            <StackPane.margin>
+                <Insets bottom="500.0" />
+            </StackPane.margin></ImageView>
+        <StackPane>
+            <children>
+                <VBox spacing="10.0">
+                    <children>
+                        <StackPane>
+                            <VBox.margin>
+                                <Insets top="70.0" />
+                            </VBox.margin>
+                            <children>
+                                <TextField fx:id="roomNumber" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="135.0" promptText="Room Number">
+                                    <StackPane.margin>
+                                        <Insets left="400.0" right="200.0" top="10.0" />
+                                    </StackPane.margin>
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                                    </font>
+                                </TextField>
+                                <TextField prefHeight="24.0" prefWidth="341.0" text="Please enter the room number">
+                                    <font>
+                                        <Font name="AppleGothic Regular" size="14.0" />
+                                    </font>
+                                    <StackPane.margin>
+                                        <Insets left="10.0" right="430.0" top="10.0" />
+                                    </StackPane.margin>
+                                </TextField>
+                                <Button fx:id="searchHotelsButton" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateReservation" prefHeight="30.0" prefWidth="135.0" text="Update">
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                    <StackPane.margin>
+                                        <Insets left="600.0" right="-20.0" top="10.0" />
+                                    </StackPane.margin>
+                                </Button>
+                                <Button fx:id="cancelButton" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelReservation" prefHeight="30.0" prefWidth="137.0" text="Cancel">
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                    <StackPane.margin>
+                                        <Insets left="600.0" right="-20.0" top="100.0" />
+                                    </StackPane.margin>
+                                </Button>
+                                <!--                        <TextField prefHeight="26.0" prefWidth="443.0">-->
+                                <!--                           <StackPane.margin>-->
+                                <!--                              <Insets right="200.0" top="100.0" />-->
+                                <!--                           </StackPane.margin>-->
+                                <!--                        </TextField>-->
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+        <ListView fx:id="reservationListView" prefHeight="370.0" prefWidth="200.0">
+            <StackPane.margin>
+                <Insets bottom="10.0" left="10.0" right="250.0" top="220.0" />
+            </StackPane.margin>
+        </ListView>
+        <VBox prefHeight="370.0" prefWidth="152.0">
+            <TextField fx:id="review" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="210.0" promptText="Review...">
+                <StackPane.margin>
+                    <Insets left="400.0" right="200.0" />
+                </StackPane.margin>
+                <font>
+                    <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                </font>
+            <padding>
+               <Insets top="10.0" />
+            </padding>
+            </TextField>
+            <Button fx:id="myReservationButton" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leaveReview" prefHeight="30.0" prefWidth="137.0" text="Leave Review">
+                <font>
+                    <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="OPEN_HAND" />
+                </cursor>
+                <StackPane.margin>
+                    <Insets bottom="10" left="600.0" right="-20.0" />
+                </StackPane.margin>
+            <VBox.margin>
+               <Insets bottom="10.0" left="40.0" right="20.0" top="5.0" />
+            </VBox.margin>
+            </Button>
+            <StackPane.margin>
+                <Insets bottom="10.0" left="580.0" right="10.0" top="220.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

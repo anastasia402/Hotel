@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<StackPane prefHeight="600" prefWidth="800.0" style="-fx-background-color: #073D31;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.bookingController">
+    <children>
+        <ImageView fx:id="headerImage" fitHeight="100.0" fitWidth="700.0" preserveRatio="true" smooth="false">
+            <StackPane.margin>
+                <Insets bottom="500.0" />
+            </StackPane.margin></ImageView>
+        <StackPane>
+            <children>
+                <VBox spacing="10.0">
+                    <children>
+                        <StackPane>
+                            <VBox.margin>
+                                <Insets top="70.0" />
+                            </VBox.margin>
+                            <children>
+                                <TextField fx:id="startDate" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="135.0" promptText="Start Date">
+                                    <StackPane.margin>
+                                        <Insets left="400.0" right="200.0" top="10.0" />
+                                    </StackPane.margin>
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                                    </font>
+                                </TextField>
+                                <TextField prefHeight="24.0" prefWidth="341.0" text="Please enter the start date">
+                                    <font>
+                                        <Font name="AppleGothic Regular" size="14.0" />
+                                    </font>
+                                    <StackPane.margin>
+                                        <Insets left="10.0" right="430.0" top="10.0" />
+                                    </StackPane.margin>
+                                </TextField>
+                                <TextField text="Please enter the end date">
+                                    <StackPane.margin>
+                                        <Insets left="10.0" right="430.0" top="100.0" />
+                                    </StackPane.margin>
+                                    <font>
+                                        <Font name="AppleGothic Regular" size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="endDate" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="135.0" promptText="End Date">
+                                    <StackPane.margin>
+                                        <Insets left="400.0" right="200.0" top="100.0" />
+                                    </StackPane.margin>
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="searchRoomsButton" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#findAbailableRooms" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #073D31;" text="Search" textFill="WHITE" underline="true">
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="16.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                    <StackPane.margin>
+                                        <Insets left="600.0" right="-20.0" top="10.0" />
+                                    </StackPane.margin>
+                                </Button>
+                                <Button fx:id="bookRoomButton" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#bookRoom" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #073D31;" text="Book" textFill="WHITE" underline="true">
+                                    <font>
+                                        <Font name="Apple SD Gothic Neo Regular" size="15.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                    <StackPane.margin>
+                                        <Insets left="600.0" right="-20.0" top="100.0" />
+                                    </StackPane.margin>
+                                </Button>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+        <ListView fx:id="roomsListView" prefHeight="70" prefWidth="150">
+            <StackPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="220.0" />
+            </StackPane.margin>
+        </ListView>
+
+        <!--        <TableView fx:id="hotelTableView" prefHeight="100" prefWidth="200">-->
+        <!--            <columns>-->
+        <!--                <TableColumn prefWidth="50" text="ID">-->
+        <!--                    <cellValueFactory>-->
+        <!--                        <PropertyValueFactory property="id" />-->
+        <!--                    </cellValueFactory>-->
+        <!--                </TableColumn>-->
+        <!--                <TableColumn prefWidth="100" text="Nume">-->
+        <!--                    <cellValueFactory>-->
+        <!--                        <PropertyValueFactory property="name" />-->
+        <!--                    </cellValueFactory>-->
+        <!--                </TableColumn>-->
+        <!--                <TableColumn prefWidth="50" text="Distance">-->
+        <!--                </TableColumn>-->
+        <!--            </columns>-->
+
+        <!--        </TableView>-->
+    </children>
+    <!--    <padding>-->
+    <!--        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />-->
+    <!--    </padding>-->
+</StackPane>
