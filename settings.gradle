@@ -1,0 +1,4 @@
+rootProject.name = 'siemensHotel'
+include 'src:main:Service'
+findProject(':src:main:Service')?.name = 'Service'
+
